@@ -1,6 +1,6 @@
-package com.validity.monolithstarter;
+package com.validity.csvduplicatereader;
 
-import com.validity.monolithstarter.config.DefaultProfileUtil;
+import com.validity.csvduplicatereader.config.DefaultProfileUtil;
 import io.github.jhipster.config.JHipsterConstants;
 
 import org.apache.commons.lang3.StringUtils;
@@ -18,18 +18,18 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class MonolithStarterApp implements InitializingBean {
+public class CsvDuplicateReader implements InitializingBean {
 
-    private static final Logger log = LoggerFactory.getLogger(MonolithStarterApp.class);
+    private static final Logger log = LoggerFactory.getLogger(CsvDuplicateReader.class);
 
     private final Environment env;
 
-    public MonolithStarterApp(Environment env) {
+    public CsvDuplicateReader(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes MonolithStarter.
+     * Initializes CsvDuplicateReader.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -50,7 +50,7 @@ public class MonolithStarterApp implements InitializingBean {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(MonolithStarterApp.class);
+        SpringApplication app = new SpringApplication(CsvDuplicateReader.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

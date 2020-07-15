@@ -1,6 +1,6 @@
-package com.validity.monolithstarter.rest;
+package com.validity.csvduplicatereader.rest;
 
-import com.validity.monolithstarter.service.HelloService;
+import com.validity.csvduplicatereader.service.HelloService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

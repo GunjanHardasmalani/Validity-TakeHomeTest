@@ -1,4 +1,4 @@
-package com.validity.monolithstarter.service;
+package com.validity.csvduplicatereader.service;
 
 import org.springframework.stereotype.Service;
 

@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.validity.monolithstarter.web;
+package com.validity.csvduplicatereader.web;
 
 import io.github.jhipster.config.JHipsterConstants;
 import org.slf4j.Logger;

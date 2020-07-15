@@ -1,6 +1,6 @@
-# MonolithStarter
+# csvDuplicateReader
 
-This project is intended to help developers quickly stand up a monolithic React/Spring Boot application. For the most part you can simply replace all instances of `monolithstarter` with appropriately-cased `yourprojectname` but make sure to do a Ctrl + F for `FIXME` to find places where more action is required.
+This project is intended to help developers quickly stand up a monolithic React/Spring Boot application. For the most part you can simply replace all instances of `csvDuplicateReader` with appropriately-cased `yourprojectname` but make sure to do a Ctrl + F for `FIXME` to find places where more action is required.
 
 This readme assumes that you have completed the [newhire checklist](https://github.com/validityhq/we_the_engineers/tree/master/newhire).
 
@@ -14,7 +14,7 @@ For PC users: For all the `./mvnw` commands mentioned below use `mvnw` instead.
 
 ```bash
 # Move to the backend directory
-cd monolithstarter-svc
+cd csvDuplicateReader-svc
 
 # Start the application in dev mode
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
@@ -26,7 +26,7 @@ You will now have a host running at [localhost:8080](http://localhost:8080/)
 
 ```bash
 # Move to the right directory
-cd monolithstarter-static
+cd csvDuplicateReader-static
 
 # Install dependencies
 yarn
@@ -65,7 +65,7 @@ For local development you want both the backend and frontend running for maximum
 
 ```bash
 # Move to the backend directory
-cd monolithstarter-svc
+cd csvDuplicateReader-svc
 
 # Start the application in dev mode
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
@@ -77,7 +77,7 @@ You will now have a host running at [localhost:8080](http://localhost:8080/)
 
 ```bash
 # Move to the right directory
-cd monolithstarter-static
+cd csvDuplicateReader-static
 
 # Install dependencies
 yarn install
@@ -106,16 +106,16 @@ yarn run build
 
 ### Docker
 ```bash
-# Move to the monolithstarter-svc directory
-cd monolithstarter-svc
+# Move to the csvDuplicateReader-svc directory
+cd csvDuplicateReader-svc
 
 # Generate a clean package
 ./mvnw clean package
 
 # Construct the docker image
-docker build -t monolithstarter-svc .
+docker build -t csvDuplicateReader-svc .
 
 # Run the image container (substitute 5000 for desired port)
-docker run -p 5000:8080 monolithstarter-svc
+docker run -p 5000:8080 csvDuplicateReader-svc
 ```
 The full application is now accessible at [localhost:5000](http://localhost:5000/) (or whatever port you chose to use)

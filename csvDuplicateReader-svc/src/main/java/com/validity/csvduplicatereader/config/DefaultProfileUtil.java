@@ -1,4 +1,4 @@
-package com.validity.monolithstarter.config;
+package com.validity.csvduplicatereader.config;
 
 import io.github.jhipster.config.JHipsterConstants;
 

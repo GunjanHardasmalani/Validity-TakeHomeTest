@@ -1,4 +1,4 @@
-package com.validity.monolithstarter.config;
+package com.validity.csvduplicatereader.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

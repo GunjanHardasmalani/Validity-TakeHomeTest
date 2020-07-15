@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.validity</groupId>
-    <artifactId>monolithstarter</artifactId>
+    <artifactId>csvDuplicateReader</artifactId>
     <version>0.0.8-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>monolithstarter-svc</name>
+    <name>csvDuplicateReader-svc</name>
 
     <repositories>
         <!-- TODO To remove after final JHipster release -->
@@ -106,7 +106,7 @@
         <sonar.tests>${project.basedir}/src/test/</sonar.tests>
         <sonar.host.url>https://qa.validity.com</sonar.host.url>
         <sonar.pullrequest.provider>github</sonar.pullrequest.provider>
-        <sonar.pullrequest.github.repository>validityhq/MonolithStarter</sonar.pullrequest.github.repository>
+        <sonar.pullrequest.github.repository>validityhq/csvDuplicateReader</sonar.pullrequest.github.repository>
         <!--suppress UnresolvedMavenProperty -->
         <sonar.login>${env.SONAR_LOGIN}</sonar.login>
         <dockerfile-maven-version>1.4.10</dockerfile-maven-version>
@@ -408,7 +408,7 @@
                             <outputDirectory>${project.build.outputDirectory}/static</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${project.basedir}/../monolithstarter-static/build</directory>
+                                    <directory>${project.basedir}/../csvDuplicateReader-static/build</directory>
                                 </resource>
                             </resources>
                         </configuration>
@@ -505,7 +505,7 @@
                             <image>adoptopenjdk:11-jre-hotspot</image>
                         </from>
                         <to>
-                            <image>monolithstarter:latest</image>
+                            <image>csvDuplicateReader:latest</image>
                         </to>
                         <container>
                             <entrypoint>
