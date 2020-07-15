@@ -1,121 +1,60 @@
-# csvDuplicateReader
+# CSV Duplicate Reader
+This applications find duplicates in a csv file.
 
-This project is intended to help developers quickly stand up a monolithic React/Spring Boot application. For the most part you can simply replace all instances of `csvDuplicateReader` with appropriately-cased `yourprojectname` but make sure to do a Ctrl + F for `FIXME` to find places where more action is required.
+## About the app
 
-This readme assumes that you have completed the [newhire checklist](https://github.com/validityhq/we_the_engineers/tree/master/newhire).
+React uses to fetch the .csv file from the computer and the file is read through a Spring-boot application, spring application parses the csv file and show duplicate and non duplicate rows using react 
 
-## Development Setup
-
-During development, you may simply work on front-end and backend with independent tools.
-
-For PC users: For all the `./mvnw` commands mentioned below use `mvnw` instead.
-
-### To run the back-end:
-
-```bash
-# Move to the backend directory
-cd csvDuplicateReader-svc
-
-# Start the application in dev mode
-./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
-```
-
-You will now have a host running at [localhost:8080](http://localhost:8080/)
-
-### To run the front-end:
-
-```bash
-# Move to the right directory
-cd csvDuplicateReader-static
+* Spring application uses Levenshtein Distance as to get matching rows and Double Metaphone to  filter out the result into multiple set of duplicates and a single set of non duplicate values
 
 # Install dependencies
-yarn
+* yarn 
+> npm i -g yarn 
+
+* use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) 
+
+ * Use Right Version of node.js 
+
+    The repo is setup to run a specific version of node.js.  This version is managed in the `.nvmrc` file in the root directory.
+    
+    In order to avoid errors related to node engine mismatches, make sure to run `nvm use` upon entering the root directory in each new terminal session. It will automatically download and set the active version to the correct one.
 
 # Start the application in dev mode
+
+##  Back-end
+
+* Navigate to backend Folder
+```bash
+ cd csvDuplicateReader-svc
+```
+
+* Run Maven Command
+```bash
+ ./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+```
+* You will now have a host running at
+> [localhost:8080](http://localhost:8080/)
+
+## Front-end
+
+* Navigate to Frontend Folder
+```bash
+ cd csvDuplicateReader-static
+```
+
+* Run Frontend
+```bash
 yarn run start
 ```
-You will now have your frontend running at [localhost:9000](http://localhost:9000/)
-
-To build frontend for production with minification:
-
-```bash
-yarn run build
-```
-
-The build artifacts will be stored in the `build/` directory
+* You will now have a host running at
+> [localhost:9000](http://localhost:9000/)
 
 
-## Build / Deployment
+# Refrences
 
-### Using the right version of node.js
-
-The repo is setup to run a specific version of node.js.  This version is managed in the `.nvmrc` file in the root directory.
-
-In order to avoid errors related to node engine mismatches, make sure to run `nvm use` upon entering the root directory in each new terminal session. It will automatically download and set the active version to the correct one.
-
-Pro-tip: If you're using Zsh as your bash client, there is a plugin for automatically switching node versions when entering a new directory (automatically triggers `nvm use` and  loads the version based on the directory’s `.nvmrc` config) [nvm-auto](https://github.com/dijitalmunky/nvm-auto)
-
-Note: WINDOWS only - `.nvmrc` does not work on Windows, so `nvm use` in the root directory will not work as above. You must manually install the node.js version that needs to be used using `nvm install [version]` and then using `nvm use [version]` For more information, see this issue, which indicates there are no plans to implement this feature unfortunately (https://github.com/coreybutler/nvm-windows/issues/128)
-
-### Local
-
-For local development you want both the backend and frontend running for maximum efficiency :)
-
-### To build and run the backend:
-
-```bash
-# Move to the backend directory
-cd csvDuplicateReader-svc
-
-# Start the application in dev mode
-./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
-```
-
-You will now have a host running at [localhost:8080](http://localhost:8080/)
-
-### To build and run the front-end:
-
-```bash
-# Move to the right directory
-cd csvDuplicateReader-static
-
-# Install dependencies
-yarn install
-
-# Start the application in dev mode
-yarn run start
-```
-You will now have your frontend running at [localhost:9000](http://localhost:9000/). Note that this won't work without the backend running!
-
-To build frontend for production with minification:
-
-```bash
-yarn run build
-```
-
-### Production Build
-
-```bash
-# Install dependencies
-yarn install
-
-# run build script
-yarn run build
-```
-
-
-### Docker
-```bash
-# Move to the csvDuplicateReader-svc directory
-cd csvDuplicateReader-svc
-
-# Generate a clean package
-./mvnw clean package
-
-# Construct the docker image
-docker build -t csvDuplicateReader-svc .
-
-# Run the image container (substitute 5000 for desired port)
-docker run -p 5000:8080 csvDuplicateReader-svc
-```
-The full application is now accessible at [localhost:5000](http://localhost:5000/) (or whatever port you chose to use)
+* [Levenshtein Distance](https://www.baeldung.com/java-levenshtein-distance#:~:text=The%20Levenshtein%20distance%20is%20a,Insertion%20of%20a%20character%20c)
+* [Metaphone Distance](https://xlinux.nist.gov/dads/HTML/doubleMetaphone.html#:~:text=Definition%3A%20An%20algorithm%20to%20code,such%20as%20a%20foreign%20word.)
+* [React Component](https://reactjs.org/)
+* [Map Functions in React](https://upmostly.com/tutorials/how-to-for-loop-in-react-with-examples)
+* [Nesting in React](https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js)
+* [Get Mapping](https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot)
