@@ -19,6 +19,23 @@ class CSVReader extends Component {
         this.setState({ fileSelected: event.target.files[0] });
     };
 
+    //Event called on clicking upload button
+    onFileUpload = event => {
+        const formData = new FormData();
+        // Update the formData object
+        formData.append(
+            "csvFile",
+            this.state.fileSelected,
+            this.state.fileName
+        );
+
+        UploadService.uploadCSV(formData)
+            .then(res => {
+                this.setState({ result: res.data, flag: true});
+            });
+
+    }
+
     render() {
 
         return (
