@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import "../node_modules/bootstrap/scss/bootstrap";
 import './App.scss';
-import HelloPage from "./pages/HelloPage";
 import HomePage from "./pages/HomePage";
 
 class App extends Component {
@@ -9,7 +9,6 @@ class App extends Component {
     return (
       <Switch>
         <Route key="home" path="/" exact={true} component={HomePage} />
-        <Route key="hello" path="/hello" exact={true} component={HelloPage} />
       </Switch>
     );
   }
