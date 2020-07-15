@@ -1,4 +1,4 @@
-package com.validity.csvduplicatereader.service;
+package com.validity.csvduplicatereader.utility;
 import java.util.Arrays;
 public class LevenshteinDistance {
 
