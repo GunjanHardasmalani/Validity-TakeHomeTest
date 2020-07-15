@@ -49,4 +49,10 @@ public class HelloController {
 
         return finalList;
     }
+
+    @GetMapping("/headers")
+    List<String> headers() {
+        List<String> listOfColumnHeaders = helper.getFieldNames();
+        return listOfColumnHeaders;
+    }
 }

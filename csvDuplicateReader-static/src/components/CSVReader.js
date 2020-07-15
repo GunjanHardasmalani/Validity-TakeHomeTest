@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UploadService from '../actions/csvReaderAction';
+import Table from "./Table";
 
 class CSVReader extends Component {
 
@@ -36,6 +37,14 @@ class CSVReader extends Component {
             });
 
     }
+
+    //fetch headers
+    async componentDidMount() {
+        const response = await fetch('/api/headers');
+        const body = await response.json();
+
+        this.setState({ headers: body});
+      }
 
     render() {
 
