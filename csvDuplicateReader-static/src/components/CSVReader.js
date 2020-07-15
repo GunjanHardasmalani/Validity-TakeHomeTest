@@ -52,6 +52,9 @@ class CSVReader extends Component {
                         </div>
                     </div>
                 </div>
+
+                {this.state.flag && <Table title="Duplicate Data" headers={this.state.headers} data={this.state.result.slice(0,this.state.result.length -1 )} />}
+                {this.state.flag && <Table title="Non-Duplicate Data" headers={this.state.headers} data={this.state.result.slice(this.state.result.length -1, this.state.result.length)} />}
             </div>
         );
     }

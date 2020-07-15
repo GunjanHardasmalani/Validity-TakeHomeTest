@@ -1,0 +1,22 @@
+.header {
+    height: 70px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background: #eee;
+
+    h1 {
+        text-align: center;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+}
+
+.csv-form {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 50px;
+
+}
+
+.uploadBtn {
+    cursor: pointer;
+}
