@@ -6,9 +6,9 @@
 /src/test/javascript/PhantomJS*/
 /dist/
 /src/
-/monolithstarter-static/build/
-/monolithstarter-svc/src/main/resources/templates/main.html
-/monolithstarter-svc/src/main/resources/public
+/csvDuplicateReader-static/build/
+/csvDuplicateReader-svc/src/main/resources/templates/main.html
+/csvDuplicateReader-svc/src/main/resources/public
 
 
 ######################
@@ -78,8 +78,8 @@ classes/
 ######################
 /log/
 /target/
-/monolithstarter-svc/target/
-/monolithstarter-svc/.sts4-cache/
+/csvDuplicateReader-svc/target/
+/csvDuplicateReader-svc/.sts4-cache/
 
 ######################
 # Gradle
@@ -152,8 +152,8 @@ electron/logs/*
 # ESLint
 ######################
 .eslintcache
-monolithstarter-svc/src/main/resources/.h2.server.properties
-monolithstarter-svc/src/test/resources/application.properties
+csvDuplicateReader-svc/src/main/resources/.h2.server.properties
+csvDuplicateReader-svc/src/test/resources/application.properties
 
 ######################
 # Cypress
@@ -165,7 +165,7 @@ monolithstarter-svc/src/test/resources/application.properties
 ######################
 # Jest
 ######################
-monolithstarter-static/coverage/
+csvDuplicateReader-static/coverage/
 
 ######################
 # SonarQube
@@ -188,4 +188,4 @@ terraform/reports/*
 ######################
 # Maven Wrapper
 ######################
-!monolithstarter-svc/.mvn/wrapper/maven-wrapper.jar
+!csvDuplicateReader-svc/.mvn/wrapper/maven-wrapper.jar

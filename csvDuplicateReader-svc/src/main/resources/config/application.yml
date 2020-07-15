@@ -1,0 +1,8 @@
+server:
+  port: 9091
+
+field:
+    threshold: 0.4
+
+column:
+    threshold: 0.6
