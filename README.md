@@ -33,7 +33,7 @@ React uses to fetch the .csv file from the computer and the file is read through
  ./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 * You will now have a host running at
-> [localhost:8080](http://localhost:8080/)
+> [localhost:9091](http://localhost:9091/)
 
 ## Front-end
 
