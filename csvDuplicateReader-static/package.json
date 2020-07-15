@@ -1,7 +1,7 @@
 {
-  "name": "MonolithStarter-static",
+  "name": "CsvDuplicateReader-static",
   "version": "0.0.1",
-  "description": "Description for MonolithStarter",
+  "description": "Description for CsvDuplicateReader",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
